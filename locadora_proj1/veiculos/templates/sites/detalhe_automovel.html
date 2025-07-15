@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ automovel.placa }}</title>
+</head>
+<body>
+    <h1>Detalhes de {{ automovel.placa }}</h1>
+    <p> <strong>Placa:</strong> {{ automovel.placa}}</p>
+    <p> <strong>Marca:</strong> {{ automovel.marca|default:"Não informado"}}</p>
+    <p> <strong>Modelo:</strong> {{ automovel.modelo|default:"Não informado"}}</p>
+    <p> <strong>Ano:</strong> {{ automovel.ano|default:"Não informado"}}</p>
+    <p> <strong>Cor:</strong>
+        {{ automovel.cor|default:"Não informado" }}</p>
+    <p> <strong>Valor Diária:</strong> {{ automovel.valor_diaria|default:"Não Informado" }}</p>
+    <p> <strong>Disponível?:</strong> {{ automovel.disponivel|default: "Não informado"}}</p>
+    <a href="{% url 'agenda:contato_lista.html' %}">Voltar</a>
+</body>
+</html>

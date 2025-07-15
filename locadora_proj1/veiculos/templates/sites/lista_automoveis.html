@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Veículos</title>
+
+    <style>
+        body {margin: 20px;}
+        ul {list-style: none; padding: 0;}
+        li {marign-bottom: 5px;}
+    </style>
+</head>
+<body>
+    <h1>Veículos</h1>
+    <a href="{%url 'veiculos:adicionar_automovel'%}">Novo Automovel</a>
+    {% if automovel %}
+       <ul>
+           {% for automovel in automovel %}
+                <li>
+                    <a href="{%url 'veiculos:detalhe_automovel' automovel.pk %}">{{contato.placa}}</a>
+                </li>
+           {% endfor %}
+       </ul>
+    {% else %}
+        <p>Nenhum veículo cadastrado.</p>
+    {% endif %}
+</body>
+</html>

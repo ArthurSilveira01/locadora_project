@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{titulo_pagina}}</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button type="submit">Adicionar Veiculo</button>
+        <a href="{%url 'veiculos:adicionar_automovel' %}">Cancelar</a>
+    </form>
+</body>
+</html>
